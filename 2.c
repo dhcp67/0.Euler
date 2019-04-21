@@ -11,7 +11,7 @@ int main() {
     long sum = 2, s = 0, cnt = 1, ret = 2;
     while(s < 4000001) {
         s = ret + cnt;
-        if(s % 2 == 0) sum += s;
+        if(~s & 1) sum += s;
         cnt = ret;
         ret = s;
     }
