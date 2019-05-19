@@ -9,12 +9,12 @@
 #define MAX_M 4000000
 
 int main() {
-    long sum = 0, cnt = 0, ret = 1;
-    while(ret < MAX_M) {
-        if(!(ret & 1)) sum += ret;
-        ret = ret + cnt;
-        cnt = ret - cnt;
+    int fib[3] = {0, 1, 0};
+    while(fib[2] < MAX_M) {
+        if(!(fib[2] & 1)) fib[0] += fib[2];
+        fib[2] = fib[2] + fib[1];
+        fib[1] = fib[2] - fib[1];
     }
-    printf("%ld\n", sum);
+    printf("%d\n", fib[0]);
     return 0;
 }
