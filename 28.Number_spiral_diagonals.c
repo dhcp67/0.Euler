@@ -6,10 +6,11 @@
  ************************************************************************/
 
 #include<stdio.h>
- 
+#define num 1001
+
 int main() {
     int sum = 1;
-    for(int i = 3; i <= 1001; i += 2) {
+    for(int i = 3; i <= num; i += 2) {
         sum += 4 * i * i - 6 * i + 6;
     }
     printf("%d", sum);
