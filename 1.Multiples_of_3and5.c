@@ -15,6 +15,6 @@ int main() {
     for (int i = 3; i < 1000; i += 3) {
         if (is_valid(i)) sum += i;
     }
-    printf("%d", sum);
+    printf("%d\n", sum);
     return 0;
 }
