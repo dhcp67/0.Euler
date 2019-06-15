@@ -7,19 +7,21 @@
 
 #include <iostream>
 using namespace std;
-#define MAX_N 1000000
+#define MAX_N 100
 
-int is_prime[MAX_N + 5];
+int prime[MAX_N + 5];
 
 int main() {
-    for(int i = 2; i * i <= MAX_N; i++) {
-        if(is_prime[i]) continue;
-        is_prime[++is_prime[0]] = i;
-        for (int j = 1; j < is_prime[0]; j++) {
-            if (is_prime[j]) break;
-            is_prime[i * j] = 1;
+    for (int M = 2; M <= MAX_N; M++) {
+        if(prime[M]== 0) {
+            prime[++prime[0]] = M;
+        }
+        for (int j = 1; j <= prime[0]; j++) {
+            if(prime[j] * M > MAX_N) break;
+            prime[prime[j] * M] = 1;
+            if(M % prime[j] == 0) break;
         }
     }
-    cout << is_prime[11] << endl;
+    cout << prime[10001] << endl;
     return 0;
 }
