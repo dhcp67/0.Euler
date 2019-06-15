@@ -11,9 +11,9 @@ using namespace std;
 int is_prime[MAX_N + 5];
 
 int main() {
-    for(int i = 2; i * i <= MAX_N; i++) {
+    for(int i = 2; i * i <= MAX_N; i += 1 + (i % 2))  {
         if(is_prime[i]) continue;
-        for(int j = 2 * i; j <= MAX_N; j+= i) {
+        for(int j = i * i; j <= MAX_N; j+= i) {
             is_prime[j] = 1;
         }
     }

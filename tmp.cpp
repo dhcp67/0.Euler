@@ -1,10 +1,10 @@
 /*************************************************************************
-	> File Name: 7_2.10001st_prime.c
+	> File Name: tmp.cpp
 	> Author: lichun
 	> Mail: 318082789@qq.com
-	> Created Time: 2019年06月15日 星期六 14时45分15秒
+	> Created Time: 2019年06月15日 星期六 15时04分46秒
  ************************************************************************/
 
-#include <stdio.h>
-
+#include <iostream>
+using namespace std;
 
