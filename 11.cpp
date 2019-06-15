@@ -36,7 +36,7 @@ int main() {
         }
     }
     for(int i = 0; i < MAX_N; i++) {
-
+        
     }
     return 0;
 }
