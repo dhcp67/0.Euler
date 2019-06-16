@@ -33,8 +33,17 @@ int main() {
             }
         }
     }
-    for (int i = 2; i <= 100; i++) {
-        printf("F[%d] = %d\n", i, f[i]);
+    long long  n;
+    while (true) {
+        int f_nums;
+        if (n % 2) {
+            f_nums = f[n] * f[(n + 1) / 2];
+        } else {
+            f_nums = f[n / 2] * f[n + 1];
+            n++;
+        }
     }
+    cout << n * (n + 1) / 2 << endl;
     return 0;
+    //76576500;
 }
