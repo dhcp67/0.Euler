@@ -12,5 +12,6 @@
 #include <cstring>
 #include <cmath>
 #include <cstdlib>
+typedef long long lint;
 
 #endif
