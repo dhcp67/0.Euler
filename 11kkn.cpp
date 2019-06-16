@@ -35,8 +35,13 @@ int main() {
             cin >> grid[i][j];
         }
     }
+    int ans = 0, m;
     for(int i = 0; i < MAX_N; i++) {
-        
+        for (int j = 0; j <MAX_N; j++) {
+            m = calc(i, j);
+            if (m > ans) ans = m;
+        }
     }
+    cout << ans <<endl;
     return 0;
 }
