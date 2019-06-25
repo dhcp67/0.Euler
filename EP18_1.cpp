@@ -9,12 +9,14 @@
 using namespace std;
 #define MAX_N 15
 int val[MAX_N + 5][MAX_N + 5];
+int keep[MAX_N + 5][MAX_N + 5];
 
 int dfs(int i , int j, int n) {
     if (i + 1 == n) {return val[i][j];}
+    if (keep[i][j] != 0) return keep[i][j];
     int val1 = dfs(i + 1, j, n);
     int val2 = dfs(i + 1, j + 1, n);
-    return (val1 > val2 ? val1 : val2) + val[i][j];
+    return keep[i][j] = (val1 > val2 ? val1 : val2) + val[i][j];
 }
 
 int main () {
