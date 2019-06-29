@@ -6,6 +6,8 @@
  ************************************************************************/
 
 #include <iostream>
+#include <cmath>
+#include <cstring>
 #include <cstdio>
 using namespace std;
 #define MAX_N 400
@@ -16,12 +18,14 @@ int main() {
     for (int i = 0; i < 100; i++) {
         for (int j = 1; j <= num[0]; j++) num[j] *= 1024;
         for (int j = 1; j <= num[0]; j++) {
-            if(num[j] < 10) continue;
+            if (num[j] < 10) continue;
             num[j + 1] += num[j] / 10;
             num[j] %= 10;
             num[0] += (j == num[0]);
-        } 
+        }
     }
+    int len = strlen(num);
+    printf("%d %d\n", strlen(num), num[strlen(num)]);
     int sum = 0;
     for (int i = num[0]; i >= 1; i--) {
         sum += num[i];
