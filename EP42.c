@@ -34,7 +34,8 @@ int main() {
     int n = sizeof(str) / 100, cnt = 0;
     printf("%d\n", n);
     for (int i = 0; i < n; i++) {
-        
+        if (is_valid(str[i])) cnt++;   
     }
+    printf("%d\n", cnt);
     return 0;
 }
