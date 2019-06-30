@@ -47,17 +47,7 @@ void init_prime() {
 }
 
 int main() {
-    init_prime;
-    for (int i = 2; i <= MAX_N; i++) {
-        if (!is_prime[i]) {
-            prime[++prime[0]] = i;
-        }
-        for (int j = 1; j <= prime[0]; j++) {
-            if (i * prime[j] > MAX_N) break;
-            is_prime[i * prime[j]] = 1;
-            if (i % prime[j] == 0) break;
-        }
-    }
+    init_prime();
     for (int i = 9; i <= MAX_N; i += 2) {
         if (!is_prime[i]) continue;
         if (!is_valid(i)) {
